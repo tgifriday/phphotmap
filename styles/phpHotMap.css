@@ -1,0 +1,217 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+
+#page {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+	padding: 5px;
+	min-height: 500px;
+	width: 900px;
+	border-right: 1px solid #17375e;
+	border-bottom: 1px solid #17375e;
+}
+
+#page-header {
+	border-top: 1px solid #17375e;
+	border-left: 1px solid #17375e;
+}
+
+#page-footer {
+	background: #17375e;
+	color: white;
+	padding: 2px;
+	text-align: center;
+	width: 907px;
+	margin: auto;
+}
+
+#logo {
+	background: url("../images/phpHotMap.png") no-repeat;
+	width: 457px;
+	height: 128px;
+}
+
+#page-menu {
+	background: #17375e;
+	color: white;
+	padding: 5px;
+}
+
+#page-menu a {
+	text-decoration: none;
+	color: white;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+	border-bottom: 5px solid #17375e;
+}
+
+#page-menu a:hover {
+	background: black;
+	border-bottom: 5px solid gray;
+}
+
+#page-center {
+	display: table-row;
+}
+
+#page-content {
+	display: table-cell;
+	vertical-align: top;
+}
+
+#page-content div {
+	margin-left: 10px;
+}
+
+#page-blocks {
+	width: 240px;
+	display: table-cell;
+	padding: 5px;
+}
+
+#block-example-result {
+	width: 90%;
+	height: 150px;
+	border: 1px dashed black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: "Lucida Console";
+	font-size: 13px;
+	padding: 5px;
+	overflow: auto;
+	background: #ffffcc;
+}
+
+.cursive {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 18px;
+	color: #17375e;
+	border-left: 5px solid #cccccc;
+	padding: 5px;
+	background: #eeeeee;
+}
+#page-content{
+	padding-right: 10px;
+}
+#page-content h2 {
+	font-size: 16px;
+	color: #17375e;
+	padding: 5px;
+	border-bottom: 3px solid #eeeeee;
+	border-left: 3px solid #eeeeee;
+}
+
+p {
+	margin-left: 9px;
+	text-align: justify;
+}
+
+button {
+	border: 0px;
+	background: #17375e;
+	color: white;
+	padding: 3px;
+	cursor: pointer;
+	margin: 5px;
+}
+
+button:hover {
+	background: #0002b5;
+}
+
+.block {
+	border: 1px solid black;
+	padding-bottom: 5px;
+	margin: 5px 1px 5px 1px;
+}
+
+.block h2 {
+	background: #17375e;
+	color: white;
+	font-size: 14px;
+	padding: 5px;
+	text-align: center;
+	margin: 0px;
+}
+
+#downloads {
+	padding: 5px;
+}
+
+.hidden {
+	display: none;
+}
+
+.edit {
+	margin: 2px;
+}
+
+#background {
+	background: url("../images/back.png") repeat-x;
+	background-color: #f5f8fc;
+	position: fixed;
+	z-index: -9999;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+.italic {
+	font-style: italic;
+}
+ul{
+margin-left: 10px;
+}
+ul.numbering {
+	list-style: decimal;
+}
+
+.block div {
+	padding: 5px;
+}
+
+iframe {
+	border: 1px solid gray;
+	width: 90%;
+	margin: 5px;
+	padding: 5px;
+}
+
+.lucida{
+	font-family: "Lucida console";
+}
+
+#page-menu{
+	top:0px;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+#page-content li{
+	padding: 7px;
+	list-style: square;
+}
+
+.table-files{
+margin: 10px;
+}
+.table-files td,.table-files th{
+	border-bottom: 1px solid gray;
+	padding: 5px;
+}

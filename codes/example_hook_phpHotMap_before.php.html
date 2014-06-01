@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Example of phpHotMap</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc18 {
+	color: #FF0000;
+	background: #FDF8E3;
+}
+.sc118 {
+	background: #FEFCF5;
+}
+.sc119 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc121 {
+	font-weight: bold;
+	color: #0000FF;
+	background: #FEFCF5;
+}
+.sc123 {
+	color: #000080;
+	background: #FEFCF5;
+}
+.sc126 {
+	font-weight: bold;
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc127 {
+	color: #8000FF;
+	background: #FEFCF5;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+</span><span class="sc121">function</span><span class="sc118"> phpHotMap_before</span><span class="sc127">(</span><span class="sc123">$method</span><span class="sc127">){</span><span class="sc118">  
+    </span><span class="sc123">$f</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> fopen</span><span class="sc127">(</span><span class="sc119">"methods.log"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"a"</span><span class="sc127">);</span><span class="sc118">  
+    fputs</span><span class="sc127">(</span><span class="sc123">$f</span><span class="sc127">,</span><span class="sc118"> date.</span><span class="sc127">(</span><span class="sc119">"Y-m-d h:i:s"</span><span class="sc127">).</span><span class="sc119">" - Beginning the method </span><span class="sc126">$method</span><span class="sc119">\n"</span><span class="sc127">);</span><span class="sc118">  
+    fclose</span><span class="sc127">(</span><span class="sc123">$f</span><span class="sc127">);</span><span class="sc118">  
+    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">true</span><span class="sc127">;</span><span class="sc118"> 
+</span><span class="sc127">}</span><span class="sc118"> 
+</span><span class="sc18">?&gt;</span></div></body>
+</html>

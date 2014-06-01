@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="keywords"
+	content="php javascript js rpc remote Procedure call mapping methods hot library">
+<title>phpHotMap - PHP Hot Mapping for Javascript</title>
+<link href="styles/phpHotMap.css" type="text/css" rel="stylesheet"/>
+<script src="lib/jquery/jquery.js" type="text/javascript"></script>
+<script src="lib/phpHotMap/phpHotMap.js" type="text/javascript"></script>
+<script src="lib/phpHotMap/example/client.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="background"></div>
+<div id="page-menu"><a href="#home">Home</a> <a href="#workflow">Workflow</a>
+<a href="#downloads">Downloads</a> <a href="#references">References</a>
+<a href="#live-example">Live example</a> <a href="#contact">Contact</a>
+</div>
+<span id="home"><br>
+</span>
+<div id="page">
+<div id="page-header">
+<table width="100%"><tr><td>
+<div id="logo"></div></td><td>
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://phphotmap.com', 'user' : 1087064, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-03-31', 'lang' : 'es', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/dfa109658"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/phphotmap.com-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+</td></tr></table>
+</div>
+<div id="page-center">
+<div class="page-content">
+<div id="page-content">
+<h1>What is phpHotMap?</h1>
+<table>
+	<tr>
+		<td>
+		<p><span class="bold">phpHotMap</span> is an <b>open source<b> library for
+		JavaScript and <a href = "http://www.php.net">PHP</a>, that allow mapping the PHP functions, static
+		methods of classes and arbitrary data on the spot of the instance a
+		JavaScript class. With this class you can call a functions and methods
+		via AJAX. This library are compose of two files:</p>
+		<ul>
+			<li><span class="cursive">phpHotMap.php, </span> for build and
+			publish the mapping in the server side</li>
+			<li><span class="cursive">phpHotMap.js</span>, for obtain the mapping
+			and execute the remote methods in the client side.</li>
+		</ul>
+		</td>
+		<td><img src="images/banner.png"></td>
+	</tr>
+</table>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<span id="downloads"></span>
+<h1>Downloads</h1>
+<table class = "table-files">
+<tr><th>File name</th><th>Description</td><th>Size</th></tr>
+<tr><td><a href="download.php">phpHotMap-1.0.zip</a></td>
+<td>phpHotMap library and examples</td><td>18.5 Kb</td></tr>
+</table>
+<span id="license"></span>
+<table><tr><!-- <td>
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FphpHotMap%2F165617126853010&amp;width=292&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=590" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:590px;" allowTransparency="true"></iframe>
+</td>--><td valign ="top">
+<h1 id="">License</h1>
+<p>This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by the
+Free Software Foundation.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>
+You should have received a copy of the GNU General Public License along
+with this program as the file <a href="lib/phpHotMap/LICENSE.txt">LICENSE.txt</a>;
+if not, please see <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</a>.
+</p>
+</td></tr></table>
+<span id="#how-to-use"></span>
+<h1>How to use phpHotMap?</h1>
+<p>phpHotMap can be use in two steps.</p>
+<ul class="numbering">
+	<li>The first step is publish the functions, methods and data in the
+	server side through instance of the <span class="bold">phpHotMapServer</span>
+	class located in the <span class="italic">phpHotMap.php</span> file.
+	You can also implement some util hooks. <br>
+	<p>Example:</p>
+	<iframe style="height: 480px" src="codes/example_server.php.html"></iframe></li>
+	<li>The second step is the use of <span class="italic">phpHotMap.js</span>
+	in the web page. You can create an instance of <span class="bold">phpHotMapClient</span>
+	and pass in the constructor the URL address of server where is located
+	the publication elaborated in the first step. <br>
+	<p>Example:</p>
+	<iframe style="height: 160px" src="codes/example_client.js.html"></iframe></li>
+</ul>
+<span id="workflow"><br>
+</span>
+<h1>Workflow</h1>
+<p>The follow steps are the main phpHotMap workflow:
+
+
+<ul class="numbering lucida">
+	<li><span class="bold">[client]</span> Instance phpHotMapClient</li>
+	<li><span class="bold">[server]</span> Instance phpHotMapServer</li>
+	<li><span class="bold">[server]</span> Build and publish the mapping</li>
+	<li><span class="bold">[client]</span> Login for private methods</li>
+	<li><span class="bold">[server]</span> Instance phpHotMapServer</li>
+	<li><span class="bold">[server]</span> Invoke <i>authorization</i> hook</li>
+	<li><span class="bold">[client]</span> Execute a method</li>
+	<li><span class="bold">[server]</span> Instance phpHotMapServer</li>
+	<li><span class="bold">[server]</span> Invoke <i>check method access</i>
+	hook</li>
+	<li><span class="bold">[server]</span> Invoke <i>before</i> hook</li>
+	<li><span class="bold">[server]</span> Execute the method</li>
+	<li><span class="bold">[server]</span> Send result</li>
+	<li><span class="bold">[server]</span> Invoke <i>after</i> hook</li>
+	<li><span class="bold">[client]</span> Retrieve result</li>
+</ul>
+</p>
+<span id="references"><br>
+</span>
+<h1>References</h1>
+<h2>PHP Classes</h2>
+<p><b>phpHotMap</b> - Static class with some util methods.</p>
+<ul>
+	<li><i>checkMethodAccess($method)</i>: Check if current user can access
+	to specific method.</li>
+	<li><i>checkRangeIP($from, $to, $ip)</i>: Check IP address in IP range.</li>
+	<li><i>getClientIPAddress()</i>: Return the client IP address.</li>
+	<li><i>getHTMLOf($mixed)</i>: Return a representative HTML of data.</li>
+	<li><i>isArrayOfObject($arr)</i>: Return TRUE if $arr is an array of
+	objects.</li>
+	<li><i>isArrayOfArray($arr)</i>: Return TRUE if $arr is an array of
+	arrays.</li>
+	<li><i>isNumericList($arr)</i>: Return TRUE if $arr is an array of
+	numbers.</li>
+	<li><i>login($username, $password)</i>: Check user's credencials and
+	start the session on server.</li>
+	<li><i>logout()</i>: End session on server.</li>
+	<li><i>verifyAuth()</i>: Verify authentication.</li>
+</ul>
+<p><b>phpHotMapServer</b> - Server mapping</p>
+<ul>
+	<li><i>phpHotMapServer($server_name)</i>: Create an instance of
+	phpHotMapServer with $server_name as name of the server.</li>
+	<li><i>addData($var, $value)</i>: Add a variable to map.</li>
+	<li><i>addMethod($name, $params, $params_complex, $security, $hosts,
+	$description)</i>: Add a method to map.</li>
+	<li><i>$name</i>:The method name. For static methods use the following
+	sintax: classname::methodname,
+	<ul>
+		<li><i>$params</i> - Array of parameters's name. It can be a string
+		with name separated by comas.</li>
+		<li><i>$params_complex</i> - Change the form of methods's call from
+		Javascript client. For exmaple:<br>
+		<br>
+		$params_complex is FALSE you can do this:<br>
+		<br>
+		<b>var result = client.sum(10, 20);</b><br>
+		<br>
+		And if $params_complex is TRUE fou can do this:<br>
+		<br>
+		<b>var result = client.sum({x: 10, y: 20});</b><br>
+		<br>
+		</li>
+		<li><i>$security</i> - TRUE for enable the security for method.</li>
+		<li><i>$hosts</i> - Array of hosts's IP address that can access to
+		server.</li>
+		<li><i>$description</i> - Description of method.</li>
+	</ul>
+	</li>
+	<li><i>showFace()</i> - Show a simple interface that show the server
+	mapping.</li>
+	<li><i>go()</i> - Mapping or execute. Waiting for client call.</li>
+</ul>
+<h2>Javascript Classes</h2>
+<p><span class="bold">phpHotMap</b> - Namespace of some methods.</p>
+<ul>
+	<li><i>getXMLHttpRequestObject()</i>: Return a XMLHTTPRequest JS
+	object.</li>
+	<li><i>ajax(params)</i>: Send an AJAX request and return the result as
+	JSON.</li>
+	<li><i>call(params)</i>: Call to a method on server.</li>
+	<li><i>login(server, username, password)</i>: Login on server with
+	specific user</li>
+	name and password.
+	</li>
+	<li><i>logout()</i>: Logout from server.</li>
+</ul>
+<p><span class="bold">phpHotMapClient</b> - Client side</p>
+<ul>
+	<li>Create a representative Javascript Object with some properties and
+	methods based on mapping.</li>
+</ul>
+<span id="hooks"><br>
+</span>
+<h2>Hooks</h2>
+<p>A <span class="bold">hook</span> is a function that intercept the
+workflow of phpHotMap in one point. The following hooks can be
+implement:</p>
+<ul>
+	<li><span class="bold">phpHotMap_before($method): </span>Before execute
+	a method.<br>
+	<p>Example: <br>
+	<iframe style="width: 90%; height: 150px"
+		src="codes/example_hook_phpHotMap_before.php.html"></iframe></p>
+	</li>
+	<li><span class="bold">phpHotMap_after($method): </span>After execute a
+	method.</li>
+	<p>Example: <br>
+	<iframe style="width: 90%; height: 150px"
+		src="codes/example_hook_phpHotMap_after.php.html"></iframe></p>
+	<li><span class="bold">phpHotMap_chkma($user, $method): </span>Check
+	method access for a user.</li>
+	<p>Example: <br>
+	<iframe style="width: 90%; height: 130px"
+		src="codes/example_hook_phpHotMap_chkma.php.html"></iframe></p>
+	<li><span class="bold">phpHotMap_auth($user, $password): </span>Login
+	on server.</li>
+	<p>Example: <br>
+	<iframe style="width: 90%; height: 130px"
+		src="codes/example_hook_phpHotMap_auth.php.html"></iframe></p>
+</ul>
+<h2 id="constants">Constants</h2>
+<p>This library contains some constants that can be returned by the
+methods of <i>phpHotMap</i> and <i>phpHotMapServer</i> classes.</p>
+<ul>
+	<li><span class="bold">PHP_HOT_MAP_ACCESS_DENIED_HOST:</span> Access
+	denied for a client host.</li>
+	<li><span class="bold">PHP_HOT_MAP_ACCESS_DENIED_USER:</span> Access
+	denied for a user.</li>
+	<li><span class="bold">PHP_HOT_MAP_LOGIN_SUCCESSFUL:</span>Login
+	successful for a user.</li>
+	<li><span class="bold">PHP_HOT_MAP_LOGIN_FAILED:</span> Login failed
+	for a user.</li>
+	<li><span class="bold">PHP_HOT_MAP_LOGOUT_SUCCESSFUL:</span> Logout
+	successful for a user.</li>
+	<li><span class="bold">PHP_HOT_MAP_METHOD_EXECUTED:</span> Method
+	execute successful.</li>
+	<li><span class="bold">PHP_HOT_MAP_METHOD_NOT_EXISTS:</span> Method not
+	exists.</li>
+	<li><span class="bold">PHP_HOT_MAP_METHOD_STOPPED:</span> The method
+	was stopped.</li>
+	<li><span class="bold">PHP_HOT_MAP_MAPPING_SUCCESSFUL:</span> Mapping
+	successful.</li>
+	<li><span class="bold">PHP_HOT_MAP_INTERFACE_SHOW_SUCCESSFUL:</span>
+	Interface are showed successful.</li>
+</ul>
+<span id="live-example"><br>
+</span>
+<h1>Live example</h1>
+<p>
+By default, when you access to the server script from the browser, the method <i>go()</i> show a web interface with information about the mapping. You 
+can see the <a href = "lib/phpHotMap/example/server.php">interface for this live example</a>.
+</p>
+<p> If you use <a href = "http://www.mozilla.org">Mozilla Firefox Browser</a>, you can install the <a href = "https://addons.mozilla.org/en-US/firefox/addon/firebug">Firebug Plugin</a> and see the content of mapping. The follow image show the mapping of this live example in Firebug:<br>
+<img src = "images/phpHotMapFirebug.png">
+<p>Now you cant testing the library in this site. Click on the buutons to see results.</p> 
+<div id="block-example">
+<div id="block-example-result">This area show the results.</div>
+<table>
+	<tr>
+		<td valign="top">
+		<fieldset><legend>Server/client</legend>
+		<button onclick="phpHotMapExamples.serverTime();">Server time</button>
+		<button onclick="phpHotMapExamples.myIP();">My IP</button>
+		</fieldset>
+		</td>
+		<td valign="top">
+		<fieldset><legend> Encryption </legend> <input class="edit"
+			id="edtExampleValue"><br>
+		<button onclick="phpHotMapExamples.md5();">Get MD5</button>
+		<button onclick="phpHotMapExamples.sha1();">Get Sha1</button>
+		</fieldset>
+		</td>
+		<td valign="top">
+		<fieldset><legend> Security </legend>
+		<div id="exampleLoginBox">Use "iam" and "free".<br>
+		User: <input class="edit" id="edtExampleUser"><br>
+		Pass: <input class="edit" id="edtExamplePass" type="password"><br>
+		<button onclick="phpHotMapExamples.login();">Login</button>
+		<br>
+		</div>
+		<div id="exampleSecurityBox" class="hidden">
+		<button id="btnExampleLogout" onclick="phpHotMapExamples.logout();">Logout</button>
+		<br>
+
+		</div>
+		<button id="btnExampleLoadPrivateData"
+			onclick="phpHotMapExamples.privateData();">Load private data</button>
+		</fieldset>
+		</td>
+	</tr>
+</table>
+</div>
+<span id="contact"><br>
+</span>
+<p align="center" style="text-align:center;color:gray;">phpHotMap is a Social Project of <a href="http://pragres.com">Pragres</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="page-footer">phpHotMap - HTML + CSS Standard compilance</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

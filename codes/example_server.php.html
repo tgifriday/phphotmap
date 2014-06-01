@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Example of phpHotMap</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc18 {
+	color: #FF0000;
+	background: #FDF8E3;
+}
+.sc118 {
+	background: #FEFCF5;
+}
+.sc119 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc121 {
+	font-weight: bold;
+	color: #0000FF;
+	background: #FEFCF5;
+}
+.sc122 {
+	color: #FF8000;
+	background: #FEFCF5;
+}
+.sc123 {
+	color: #000080;
+	background: #FEFCF5;
+}
+.sc125 {
+	color: #008000;
+	background: #FEFCF5;
+}
+.sc127 {
+	color: #8000FF;
+	background: #FEFCF5;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc18">&lt;?php</span><span class="sc118">
+
+</span><span class="sc125">// Include the library</span><span class="sc118">
+</span><span class="sc121">include</span><span class="sc118"> </span><span class="sc119">"phpHotMap.php"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc125">// The program</span><span class="sc118">
+</span><span class="sc125">// Note: the programa can be located in an external file</span><span class="sc118">
+
+</span><span class="sc121">function</span><span class="sc118"> sum</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$y</span><span class="sc127">){</span><span class="sc118">
+    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc127">+</span><span class="sc118"> </span><span class="sc123">$y</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc121">class</span><span class="sc118"> Enterprise</span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">public</span><span class="sc118"> </span><span class="sc121">function</span><span class="sc118"> getEmployees</span><span class="sc127">(){</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc118">
+            </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc119">"name"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Thomas Hardy"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"salary"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc122">1500</span><span class="sc127">),</span><span class="sc118">
+            </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc119">"name"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Christina Berglund"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"salary"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc122">1200</span><span class="sc127">)</span><span class="sc118">
+        </span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc125">// Server instance</span><span class="sc118">
+
+</span><span class="sc123">$server</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> phpHotMapServer</span><span class="sc127">();</span><span class="sc118">
+</span><span class="sc123">$server</span><span class="sc127">-&gt;</span><span class="sc118">addMethod</span><span class="sc127">(</span><span class="sc119">"sum"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"x,y"</span><span class="sc127">);</span><span class="sc118">
+</span><span class="sc123">$server</span><span class="sc127">-&gt;</span><span class="sc118">addMethod</span><span class="sc127">(</span><span class="sc119">"Enterprise::getEmployees"</span><span class="sc127"><span class="sc127">);</span><span class="sc118">
+</span><span class="sc123">$server</span><span class="sc127">-&gt;</span><span class="sc118">go</span><span class="sc127">();</span><span class="sc118">
+
+</span><span class="sc18">?&gt;</span></div></body>
+</html>
