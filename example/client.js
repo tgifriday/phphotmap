@@ -1,5 +1,5 @@
 var phpHotMapExamples = {
-    client: new phpHotMapClient("example/server.php"),
+    client: new phpHotMapClient("/example/server.php"),
 	
     serverTime: function(){
         var serverTime = this.client.getServerTime();
