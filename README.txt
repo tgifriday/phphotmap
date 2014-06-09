@@ -220,11 +220,3 @@ This library contains some constants that can be returned by methods.
     * PHP_HOT_MAP_METHOD_STOPPED: The method was stopped.
     * PHP_HOT_MAP_MAPPING_SUCCESSFUL: Mapping successful.
     * PHP_HOT_MAP_INTERFACE_SHOW_SUCCESSFUL: Interface are showed successful.
-
-______________________________________________________________
-
-Contact
-______________________________________________________________
-
-Author: Rafael Rodriguez
-Email: rafa@gmail.com
