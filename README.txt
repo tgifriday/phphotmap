@@ -15,13 +15,13 @@
 * http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
 *
 *
-* @author Rafael Rodriguez Ramirez
+* @author Rafael Rodriguez 
 *
-* @email rrodriguezramirez@gmail.com
+* @email rafa@pragres.com
 *
-* @url http:://phphotmap.salvipascual.com
+* @url http:://phphotmap.pragres.com
 *
-* @version 1.0
+* @version 1.1
 
 _______________________________________________________________
 
@@ -48,7 +48,8 @@ In the server:
 
 // Include the library 
 
-include "phpHotMap.php"; 
+include "phpHotMap.php";
+include "phpHotMapServer.php";  
 
 // The program 
 // Note: the programa can be located in an external file 
@@ -225,6 +226,5 @@ ______________________________________________________________
 Contact
 ______________________________________________________________
 
-Author: Rafael Rodriguez Ramirez
-Email: rrodriguezramirez@gmail.com
-Phone: +5352458998
+Author: Rafael Rodriguez
+Email: rafa@gmail.com
