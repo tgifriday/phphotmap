@@ -27,6 +27,7 @@
 session_start();
 
 include "../phpHotMap.php";
+include "../phpHotMapServer.php";
 
 // Methods
 
