@@ -13,7 +13,6 @@
  * This program is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
- * for more details.
  *
  * You should have received a copy of the GNU General Public License
  * along with this program as the file LICENSE.txt; if not, please see
@@ -263,7 +262,7 @@ class phpHotMapServer {
 			$islist = is_array($data) && (empty($data) || array_keys($data) === range(0, count($data) - 1));
 			
 			if ($islist)
-				$json = '[' . implode(',', array_map('div::jsonEncode', $data)) . ']';
+				$json = '[' . implode(',', array_map('phpHotMapServer::jsonEncode', $data)) . ']';
 			else {
 				$items = array();
 				foreach ( $data as $key => $value ) {
